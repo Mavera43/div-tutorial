@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Kutu Düzeni</title>
+
+<style>
+  /* Her şeyde border-box kullan */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    display: flex;gap:20px;
+    flex-wrap: wrap; /* taşma yerine alt satıra geç */
+     border-radius: 20px;
+    border: 15px solid lightseagreen;
+    height: auto; /* yükseklik içeriğe göre ayarlansın */
+    justify-content: space-evenly;
+    
+  }
+
+  .container div {
+    flex: 1 1 25%; /* varsayılan olarak 3'e bölünür */
+    min-width: 200px; /* çok dar ekranlarda taşmayı önler */
+    max-width: 400px;
+    height: 300px;
+    border: 1px solid lightgray;
+    background-color: lightseagreen;
+    margin:20px 20px;display: flex;justify-content: space-around;align-items: center;
+    border-radius: 20px;box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+  }
+ img {
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+            object-position: center;
+            border:5px solid white;border-radius: 20px;
+        }
+
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left"><img src="https://picsum.photos/id/122/3888/2592" alt=""></div>
+    <div class="center"><img src="https://picsum.photos/id/122/3888/2592" alt=""></div>
+    <div class="right"><img src="https://picsum.photos/id/122/3888/2592" alt=""></div>
+    <div class="right"><img src="https://picsum.photos/id/122/3888/2592" alt=""></div>
+    <div class="right"><img src="https://picsum.photos/id/122/3888/2592" alt=""></div>
+  </div>
+
+</body>
+</html>
